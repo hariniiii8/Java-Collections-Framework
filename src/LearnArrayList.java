@@ -3,11 +3,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LearnArrayList {
+public class LearnArrayList {                     // arraylist dynamically allocates size according to needs unlike array , whose size is fixed.
 
     public static void main(String[] args) {
-
-        List<Integer> list = new LinkedList<>();
+// ArrayList<Integer> list =new ArrayList<>();
+       List<Integer> list = new LinkedList<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -17,7 +17,7 @@ public class LearnArrayList {
         System.out.println(list);
 
         list.add(1, 50); // This will add 50 at index 1. All the other elements will be shifted to right.
-        System.out.println(list);
+        System.out.println(list);  //tc O(n) as all elememts will shift to right by 1
 
         List<Integer> newList = new ArrayList(); // Creating a new List which will be added to original list.
         newList.add(150);
@@ -26,7 +26,7 @@ public class LearnArrayList {
         list.addAll(newList); // This will add all the elements present in newList to list.
         System.out.println(list);
 
-        System.out.println(list.get(1));
+        System.out.println(list.get(1));   // prints the element at index 1
 
 //        List<Integer> list = new ArrayList<>();
 //        list.add(10);
@@ -54,11 +54,11 @@ public class LearnArrayList {
 //            System.out.println("iterator " + it.next());
 //        }
 
-//        list.set(2, 1000);
+//        list.set(2, 1000);   // to update the value at index at 2 to 1000
 //
 //        System.out.println(list);
 //
-//        System.out.println(list.contains(500));
+//        System.out.println(list.contains(500)); // checks if the list contains 500, returns boolean.
 
 //        list.remove(1);  // This will remove the element at index 1 i.e 20.
 //        System.out.println(list);
